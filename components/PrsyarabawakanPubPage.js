@@ -54,36 +54,33 @@ const PrsyarabawakanPubPage = () => {
 
       <View className="items-center mt-5">
 
-      {
-  isLoading ? (
-    <ActivityIndicator size="large" color="#06755d" />
-  ) : (
-    <View>
-      {
-        dbase?.map((item,index)=>{
-
-        return(
+      {isLoading ? (
+        <ActivityIndicator size="large" color="#06755d" />
+      ) : (
+        <View>
+          {dbase.length > 0 ? (
+            dbase.map((item, index) => (
+              <View key={item.id}>
+               <InstPublishCardsPage 
           
-          <PrsyarabawakanCardsPage 
+          key={item.id} 
+          id={item.id}
+          imgUrl={item.cover.img}
+          title={item.title}
+          paragraph={item.paragraph}
+          publisherName={item.publisher_name}
+          publisherImg={item.publisher_img}
           
-           key={item.id} 
-           id={item.id}
-           imgUrl={item.cover_img}
-           title={item.title}
-           paragraph={item.paragraph}
-           publisherName={item.publisher_name}
-           publisherImg={item.publisher_img}
-           
-          />
-         
-        )
-        }
-        )
-      }
-
-    </View>
-  )
-}
+         />
+              </View>
+            ))
+          ) : (
+            <View className="mt-8 items-center">
+            <Text className="text-gray-500 font-[Bold] ">هیچ داتایەک بەردەست نیە</Text>
+            </View>
+          )}
+        </View>
+      )}
 
       </View>
 

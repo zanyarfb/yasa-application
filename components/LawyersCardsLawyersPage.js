@@ -44,47 +44,43 @@ useEffect(()=>{
     
     <View>
 
-{
-  isLoading ? (
-    <ActivityIndicator size="large" color="#06755d" />
-  ) : (
-    <View>
-      {
-        dbase?.map((item,index)=>{
-          
-        return(
-          
-          <LawyersCard 
-          
-           key={item.id} 
-           id={item.id}
-           imgUrl={item.profile_image}
-           sendicateImg={item.sendicate_image}
-           name={item.name}  
-           exper={item.experience}
-           ofLocation={item.location}
-           city={item.city}
-           level={item.level}
-           degree={item.degree}
-           mobile={item.mobile}
-           longitude={item.longitude}
-           latitude={item.latitude}
-           email={item.email}
-           facebook={item.facebook}
-           instagram={item.instagram}
-           tiktok={item.tiktok}
-           linkedin={item.linkedin}
-           twitter={item.twitter}
-          />
-         
-        )
-        }
-        )
-      }
-
-    </View>
-  )
-}
+{isLoading ? (
+        <ActivityIndicator size="large" color="#06755d" />
+      ) : (
+        <View>
+          {dbase.length > 0 ? (
+            dbase.map((item, index) => (
+              <View key={item.id}>
+                <LawyersCard
+                  key={item.id}
+                  id={item.id}
+                  imgUrl={item.profile_image}
+                  name={item.name}
+                  exper={item.experience}
+                  ofLocation={item.location}
+                  city={item.city}
+                  level={item.level}
+                  degree={item.degree}
+                  mobile={item.mobile}
+                  sendicateImg={item.sendicate_image}
+                  longitude={item.longitude}
+                  latitude={item.latitude}
+                  email={item.email}
+                  facebook={item.facebook}
+                  instagram={item.instagram}
+                  tiktok={item.tiktok}
+                  linkedin={item.linkedin}
+                  twitter={item.twitter}
+                />
+              </View>
+            ))
+          ) : (
+            <View className="mt-8 items-center">
+            <Text className="text-gray-500 font-[Bold] ">هیچ داتایەک بەردەست نیە</Text>
+            </View>
+          )}
+        </View>
+      )}
     </View>
     
   )

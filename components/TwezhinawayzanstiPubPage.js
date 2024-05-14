@@ -52,39 +52,33 @@ const TwezhinawayzanstiPubPage = () => {
 
       <View className="items-center mt-5">
 
-      {
-  isLoading ? (
-    <ActivityIndicator size="large" color="#06755d" />
-  ) : (
-    <View>
-      {
-        dbase?.map((item,index)=>{
-
-   
-          
-        return(
-          
-          <TwezhinawayzanstiCardsPage 
+      {isLoading ? (
+        <ActivityIndicator size="large" color="#06755d" />
+      ) : (
+        <View>
+          {dbase.length > 0 ? (
+            dbase.map((item, index) => (
+              <View key={item.id}>
+               <InstPublishCardsPage 
           
           key={item.id} 
           id={item.id}
-          imgUrl={item.cover_img}
+          imgUrl={item.cover.img}
           title={item.title}
           paragraph={item.paragraph}
           publisherName={item.publisher_name}
-          university={item.university}
-          publisherImage={item.publisher_img}
-           
-          />
-         
-        )
-        }
-        )
-      }
-
-    </View>
-  )
-}
+          publisherImg={item.publisher_img}
+          
+         />
+              </View>
+            ))
+          ) : (
+            <View className="mt-8 items-center">
+            <Text className="text-gray-500 font-[Bold] ">هیچ داتایەک بەردەست نیە</Text>
+            </View>
+          )}
+        </View>
+      )}
 
       </View>
 

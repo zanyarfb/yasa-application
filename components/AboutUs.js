@@ -1,4 +1,4 @@
-import { View, Text,Image,SafeAreaView, TouchableOpacity, ScrollView, } from 'react-native'
+import { View, Text,Image,SafeAreaView, TouchableOpacity, ScrollView,Linking } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { assets } from '../constants'
@@ -38,19 +38,19 @@ const AboutUs = () => {
 
                 <View className="items-center mt-5">
                     <View className="flex-row space-x-5">
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={()=> Linking.openURL('https://www.facebook.com/profile.php?id=61552814963287')}>
                         <Image source={assets.facebookgreen} resizeMode='contain' className="h-14 w-14" />
                     </TouchableOpacity>
 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={()=> Linking.openURL('https://www.instagram.com/yasa_app/')}>
                         <Image source={assets.instagramgreen} resizeMode='contain' className="h-14 w-14" />
                     </TouchableOpacity>
 
-                    <TouchableOpacity>
-                        <Image source={assets.twittergreen} resizeMode='contain' className="h-14 w-14" />
+                    <TouchableOpacity onPress={()=> Linking.openURL('https://www.tiktok.com/@yasa.app')}>
+                        <Image source={assets.tiktokGreen} resizeMode='contain' className="h-14 w-14" />
                     </TouchableOpacity>
 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={()=> Linking.openURL('https://www.linkedin.com/in/yasa-app-50523b299/')}>
                         <Image source={assets.linkedingreen} resizeMode='contain' className="h-14 w-14" />
                     </TouchableOpacity>
                     </View>
@@ -62,7 +62,7 @@ const AboutUs = () => {
 
                 <View className="items-end mr-5">
                 <Text className="font-[Bold] pt-1 mt-10 text-lg">پەیوەندیمان پێوە بکەن</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={()=>{dialCall(7516606061)}}>
                         <Image source={assets.phonegreen} resizeMode='contain' className=" h-16 w-16"/>
                     </TouchableOpacity>
                 </View>
@@ -70,7 +70,7 @@ const AboutUs = () => {
 
                 <View className="items-end mr-5">
                 <Text className="font-[Bold] pt-1 mt-5 text-lg">ئیمەڵ</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={()=> Linking.openURL(`mailto:yasaapplication@gmail.com`)}>
                         <Image source={assets.emailgreen} resizeMode='contain' className=" h-16 w-16"/>
                     </TouchableOpacity>
                 </View>

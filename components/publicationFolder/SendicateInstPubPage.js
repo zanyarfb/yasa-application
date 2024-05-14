@@ -53,38 +53,33 @@ const SendicateInstPubPage = () => {
 
       <View className="items-center mt-5">
 
-      {
-  isLoading ? (
-    <ActivityIndicator size="large" color="#06755d" />
-  ) : (
-    <View>
-      {
-        dbase?.map((item,index)=>{
-
-        
+      {isLoading ? (
+        <ActivityIndicator size="large" color="#06755d" />
+      ) : (
+        <View>
+          {dbase.length > 0 ? (
+            dbase.map((item, index) => (
+              <View key={item.id}>
+               <InstPublishCardsPage 
           
-        return(
+          key={item.id} 
+          id={item.id}
+          imgUrl={item.cover.img}
+          title={item.title}
+          paragraph={item.paragraph}
+          publisherName={item.publisher_name}
+          publisherImg={item.publisher_img}
           
-          <SendicateInstCardsPage 
-          
-           key={item.id} 
-           id={item.id}
-           imgUrl={item.cover_img}
-           title={item.title}
-           paragraph={item.paragraph}
-           publisherName={item.publisher_name}
-           publisherImg={item.publisher_img}
-           
-          />
-         
-        )
-        }
-        )
-      }
-
-    </View>
-  )
-}
+         />
+              </View>
+            ))
+          ) : (
+            <View className="mt-8 items-center">
+            <Text className="text-gray-500 font-[Bold] ">هیچ داتایەک بەردەست نیە</Text>
+            </View>
+          )}
+        </View>
+      )}
 
       </View>
 

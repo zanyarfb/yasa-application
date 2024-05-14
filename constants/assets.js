@@ -84,6 +84,7 @@ import logingreen from '../assets/icons/logingreen.png';
 import loginwhite from '../assets/icons/loginwhite.png';
 import closeXgray from '../assets/icons/closexgray.png';
 import blawkrawakanGray from '../assets/icons/blawkrawakanGray.png';
+import tiktokGreen from '../assets/icons/tiktokGreen.png'
 import yasaintro from '../assets/images/yasagifintrov2.gif'
 
 export default {
@@ -141,6 +142,7 @@ export default {
     facebookgray,
     instagramgray,
     snapchatgray,
+    tiktokGreen,
     closebuttonwhite,
     accountgreen,
     accountwhite,

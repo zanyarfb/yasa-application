@@ -204,7 +204,7 @@ const LawyerProfile = () => {
 
                              </View>
                             
-                             <Image  source={sendicateImg} resizeMode='stretch' className=" bg-black w-11/12 mx-4 h-60 rounded-xl" />
+                             <Image  source={{uri:sendicateImg}} resizeMode='stretch' className=" bg-black w-11/12 mx-4 h-60 rounded-xl" />
                             
                         </View>
 

@@ -87,30 +87,30 @@ const dialCall = (number) => {
 
        <View className="mt-10 items-center">
         <View className="flex-row space-x-5">
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=> Linking.openURL('https://www.facebook.com/profile.php?id=61552814963287')}>
              <Image source={assets.facebookgreen} resizeMode='contain' className="h-14 w-14" />
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=> Linking.openURL('https://www.instagram.com/yasa_app/')}>
              <Image source={assets.instagramgreen} resizeMode='contain' className="h-14 w-14" />
           </TouchableOpacity>
 
-          <TouchableOpacity>
-             <Image source={assets.twittergreen} resizeMode='contain' className="h-14 w-14" />
+          <TouchableOpacity onPress={()=> Linking.openURL('https://www.tiktok.com/@yasa.app')}>
+             <Image source={assets.tiktokGreen} resizeMode='contain' className=" h-14 w-14" />
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=> Linking.openURL('https://www.linkedin.com/in/yasa-app-50523b299/')}>
              <Image source={assets.linkedingreen} resizeMode='contain' className="h-14 w-14" />
           </TouchableOpacity>
         </View>
 
 
         <View className="flex-row mt-6 space-x-5">
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=> Linking.openURL(`mailto:yasaapplication@gmail.com`)}>
             <Image source={assets.emailgreen} resizeMode='contain' className=" h-16 w-16"/>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={()=>{dialCall(7514473727)}}>
+          <TouchableOpacity onPress={()=>{dialCall(7516606061)}}>
             <Image source={assets.phonegreen} resizeMode='contain' className=" h-16 w-16"/>
           </TouchableOpacity>
         </View>

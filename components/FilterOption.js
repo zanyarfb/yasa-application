@@ -27,12 +27,51 @@ const FilterOption = () => {
         {key:"1",value:"هەولێر"},
         {key:"2",value:"سلێمانی"},
         {key:"3",value:"دهۆک"},
+        {key:"4",value:"هەڵەبجە"},
+        {key:"5",value:"کەرکوک"},
+        {key:"6",value:"زاخۆ"},
+        {key:"7",value:"سۆران"},
+        {key:"8",value:"ڕانیە"},
+        {key:"9",value:"شەقڵاوە"},
+        {key:"10",value:"کۆیە"},
+        {key:"11",value:"مەخموور"},
+        {key:"12",value:"کەلار"},
+        {key:"13",value:"حاجیاوە"},
+        {key:"14",value:"چەمچەماڵ"},
+        {key:"15",value:"ئامێدی"},
+        {key:"16",value:"ئاکرێ"},
+        {key:"17",value:"شەنگال"},
+        {key:"18",value:"بەردەڕەش"},
+        {key:"19",value:"پیرمام"},
+        {key:"20",value:"هەریر"},
+        {key:"21",value:"دەشتی هەولێر"},
+        {key:"22",value:"تەق تەق"},
+        {key:"23",value:"شارەزوور"},
+        {key:"24",value:"سەیدسادق"},
+        {key:"25",value:"پشتدەر"},
+        {key:"26",value:"خانەقین"},
+        {key:"27",value:"خورماتوو"},
+        {key:"28",value:"کفری"},
+        {key:"29",value:"سیمێڵ"},
+        {key:"30",value:"سنونێ"},
+        {key:"31",value:"قەسرۆک"},
+        {key:"32",value:"شێخان"},
+        {key:"33",value:"دێرەلوک"},
       ]
+      /////////////////////////////////////
       const cateogoryData=[
-        {key:"1",value:"تەڵاق"},
-        {key:"2",value:"کۆمپانیا"},
-        {key:"3",value:"قیسام شەرعی"},
+        {key:"1",value:"شارستانی"},
+        {key:"2",value:"سزادان"},
+        {key:"3",value:"باری کەسی"},
+        {key:"4",value:"کۆمپانیاکان"},
+        {key:"5",value:"خانووبەرە"},
+        {key:"6",value:"کار"},
+        {key:"7",value:"ڕەگەزنامە"},
+        {key:"8",value:"سەلماندن"},
+        {key:"9",value:"دادبینی شارستانی"},
+        {key:"10",value:"تاوان"},
       ]
+      ////////////////////////////////////
       const genderData=[
         {key:"1",value:"نێر"},
         {key:"2",value:"مێ"},
@@ -44,7 +83,7 @@ const FilterOption = () => {
       const bottomSheetmodalRefCateigory = useRef(null)
       const bottomSheetmodalRefGender = useRef(null)
 
-      const snapPoints=["48%","75%"]
+      const snapPoints=["48%","100%"]
   
       function handlePresentModalCity(){
         bottomSheetmodalRefCity.current?.present()
@@ -180,7 +219,7 @@ const FilterOption = () => {
 
 
 
-                    <View className="items-end mt-5">
+                    <View className="items-end mt-5 pb-48">
                       <Text className="font-[Bold] text-lg mr-6 pt-1">شوێنەکەت هەڵبژێرە</Text>
                       <FlatList
                        data={cityData}
@@ -225,7 +264,7 @@ const FilterOption = () => {
 
 
 
-                    <View className="items-end mt-5">
+                    <View className="items-end mt-5 pb-48">
                       <Text className="font-[Bold] text-lg mr-6 pt-1">پسپۆڕی دیاریبکە</Text>
                       <FlatList
                        data={cateogoryData}
@@ -276,7 +315,7 @@ const FilterOption = () => {
 
 
 
-                    <View className="items-end mt-5">
+                    <View className="items-end mt-5 pb-48">
                       <Text className="font-[Bold] text-lg mr-6 pt-1">ڕەگەز دیاریبکە</Text>
                       <FlatList
                        data={genderData}
